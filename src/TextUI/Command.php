@@ -283,7 +283,7 @@ class Command
         }
 
         if (!isset($this->arguments['test']) && $arguments->hasArgument()) {
-            $this->arguments['test'] = realpath($arguments->argument());
+            $this->arguments['test'] = $arguments->argument();
 
             if ($this->arguments['test'] === false) {
                 $this->exitWithErrorMessage(

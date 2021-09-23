@@ -93,7 +93,8 @@
     "extra": {
         "branch-alias": {
             "dev-master": "9.5-dev",
-            "dev-9.5": "9.5-dev"
+            "dev-9.5": "9.5-dev",
+            "dev-9.5-symlinks": "9.5-dev"
         }
     }
 }
