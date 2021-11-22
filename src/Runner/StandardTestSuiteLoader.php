@@ -41,14 +41,6 @@ final class StandardTestSuiteLoader implements TestSuiteLoader
         if (!class_exists($suiteClassName, false)) {
             /* @noinspection UnusedFunctionResultInspection */
             FileLoader::checkAndLoad($suiteClassFile);
-
-            $loadedClasses = array_values(
-                array_diff(get_declared_classes(), $loadedClasses)
-            );
-
-            if (empty($loadedClasses)) {
-                throw $this->exceptionFor($suiteClassName, $suiteClassFile);
-            }
         }
 
         if (!class_exists($suiteClassName, false)) {
